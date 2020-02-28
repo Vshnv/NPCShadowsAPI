@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.herocraftonline.heroes:heroes-stripped:4dd3dd85">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/herocraftonline/heroes/heroes-stripped/4dd3dd85/heroes-stripped-4dd3dd85.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/herocraftonline/heroes/heroes-stripped/4dd3dd85/heroes-stripped-4dd3dd85-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/herocraftonline/heroes/heroes-stripped/4dd3dd85/heroes-stripped-4dd3dd85-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

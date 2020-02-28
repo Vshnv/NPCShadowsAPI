@@ -1,0 +1,7 @@
+name: ShadowManager
+version: ${project.version}
+main: com.rocketmail.vaishnavanil.shadowmanager.ShadowManager
+api-version: 1.13
+depend: [Citizens,Heroes]
+authors: [yugikid1]
+description: Allows HEROES skills to use shadows!
