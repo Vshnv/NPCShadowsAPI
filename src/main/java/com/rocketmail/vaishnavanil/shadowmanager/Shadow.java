@@ -13,7 +13,11 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class Shadow {
     /**
@@ -181,6 +185,14 @@ public class Shadow {
     }
 
     /**
+     * Banishes shadow and gives player a DarknessEssence
+     */
+    public void essensifyShadow(){
+        owner.getLocation().getWorld().dropItemNaturally(owner.getLocation(),getEssenceOfDarknessItem(1));
+        banishShadow();
+    }
+
+    /**
      *
      * @return Entity ID
      */
@@ -189,4 +201,17 @@ public class Shadow {
     }
 
 
+
+
+    
+    private static final List<String> essenceLore = Arrays.asList(ChatColor.GRAY+"Used to increase your capability to spawn Shadows!");
+    public static ItemStack getEssenceOfDarknessItem(int Amount){
+        ItemStack essence = new ItemStack(Material.GUNPOWDER);
+        ItemMeta meta = essence.getItemMeta();
+        meta.setDisplayName(ChatColor.WHITE+""+ChatColor.BOLD + "" + ChatColor.UNDERLINE+"Essence Of Darkness");
+        meta.setLore(essenceLore);
+        essence.setItemMeta(meta);
+        essence.setAmount(Amount);
+        return essence;
+    }
 }
