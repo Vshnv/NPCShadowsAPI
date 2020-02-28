@@ -203,15 +203,21 @@ public class Shadow {
 
 
 
-    
+    private static final String essenceDisplay = ChatColor.WHITE+""+ChatColor.BOLD + "" + ChatColor.UNDERLINE+"Essence Of Darkness";
     private static final List<String> essenceLore = Arrays.asList(ChatColor.GRAY+"Used to increase your capability to spawn Shadows!");
     public static ItemStack getEssenceOfDarknessItem(int Amount){
         ItemStack essence = new ItemStack(Material.GUNPOWDER);
         ItemMeta meta = essence.getItemMeta();
-        meta.setDisplayName(ChatColor.WHITE+""+ChatColor.BOLD + "" + ChatColor.UNDERLINE+"Essence Of Darkness");
+        meta.setDisplayName(essenceDisplay);
         meta.setLore(essenceLore);
         essence.setItemMeta(meta);
         essence.setAmount(Amount);
         return essence;
+    }
+
+    public static boolean isEssenceOfDarknessItem(ItemStack stack){
+        if(!stack.hasItemMeta())return false;
+        if(stack.getItemMeta().getDisplayName() == null)return false;
+        return stack.getItemMeta().getDisplayName().equals(essenceDisplay);
     }
 }
